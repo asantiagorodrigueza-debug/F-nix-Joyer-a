@@ -153,6 +153,42 @@ body {
   color: var(--gold-light);
 }
 
+/* Subtítulos de categoría (Oro / Plata) */
+.category-divider {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(184, 150, 46, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-divider--spaced {
+  margin-top: 72px;
+}
+
+.category-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--off-white);
+  text-transform: uppercase;
+}
+
+.category-title em {
+  font-style: italic;
+  color: var(--gold-light);
+  text-transform: none;
+}
+
+.badge--silver {
+  background: rgba(210, 215, 222, 0.15);
+  border: 1px solid rgba(210, 215, 222, 0.5);
+  color: #e2e6ec;
+}
+
 .story-text {
   max-width: 700px;
   margin: 0 auto;
@@ -597,3 +633,22 @@ body {
     flex-wrap: wrap;
   }
 }
+
+/* ==========================================
+   AJUSTES RESPONSIVE DE LAS COLECCIONES
+   ========================================== */
+
+.products-grid {
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, 280px), 1fr)
+  );
+}
+
+.product-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
